@@ -1,0 +1,9 @@
+name: TemplateBukkitGradle
+version: '1.0'
+main: eu.xap3y.templatebukkitgradle.TemplateBukkitGradle
+api-version: '1.20'
+authors: [ XAP3Y ]
+description: template
+website: https://xap3y.eu
+
+#softdepend: [PlaceholderAPI]
