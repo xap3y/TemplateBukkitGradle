@@ -11,6 +11,14 @@ cd TemplateBukkitGradle
     2.1 change the `group`, `baseCoordinates` and `version` in the `build.gradle` file. \
     2.2 change the `main` and `name` in the `src/main/resources/plugin.yml` file.
 
+#### Fast installation (Linux only):
+
+This will create the project in the active directory
+
+```shell
+curl -fsSL https://static.xap3y.space/install.sh | bash
+```
+
 ### List of features implemented in this project:
 
 - [x] [Paper API 1.20.4](https://jd.papermc.io/paper/1.20.4/)
