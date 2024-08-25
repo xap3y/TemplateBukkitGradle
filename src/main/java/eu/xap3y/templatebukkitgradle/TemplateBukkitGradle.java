@@ -5,7 +5,6 @@ import eu.xap3y.templatebukkitgradle.manager.ConfigManager;
 import eu.xap3y.xagui.XaGui;
 import eu.xap3y.xalib.managers.Texter;
 import eu.xap3y.xalib.objects.TexterObj;
-import org.bstats.bukkit.Metrics;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class TemplateBukkitGradle extends JavaPlugin {
@@ -44,11 +43,14 @@ public final class TemplateBukkitGradle extends JavaPlugin {
         registerListeners(manager);*/
 
         //  Setting up bStats  \\
-        int pluginId = 1234; // <-- Replace with the id of your plugin!
-        Metrics metrics = new Metrics(this, pluginId);
+        /*int pluginId = 1234; // <-- Replace with the id of your plugin!
+        Metrics metrics = new Metrics(this, pluginId);*/
 
         //  Registering PlaceholderAPI  \\
         //registerPapi();
+
+        // Get current mc version as x.x.x
+
     }
 
     /*private static void registerListeners(PluginManager manager) {

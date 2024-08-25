@@ -33,11 +33,10 @@ repositories {
 
 dependencies {
     compileOnly "io.papermc.paper:paper-api:1.20.4-R0.1-SNAPSHOT"
-    implementation 'com.github.xap3y:xagui:8c256a1'
+    implementation 'com.github.xap3y:xagui:0.5'
     implementation 'com.github.xap3y:xalib:ec589911f642398833b467cab0cbc032d7f7162a'
     implementation 'org.incendo:cloud-annotations:2.0.0-rc.2'
     implementation 'org.incendo:cloud-paper:2.0.0-beta.9'
-    implementation 'org.bstats:bstats-bukkit:3.0.2'
 
     /*
         OPTIONAL ( Dont forget to shadow them after enabling )
@@ -47,6 +46,7 @@ dependencies {
     //implementation 'com.github.xap3y:skullcreator:ccdc446'
     //implementation 'com.github.cryptomorin:XSeries:11.2.0.1'
     //implementation 'com.github.fierioziy.particlenativeapi:ParticleNativeAPI-core:4.3.0'
+    //implementation 'org.bstats:bstats-bukkit:3.0.3'
 
     // No need to shadow these:
 
@@ -95,8 +95,8 @@ tasks {
         archiveBaseName.set(baseCoordinates)
         relocate 'eu.xap3y.xagui', "${group}.${baseCoordinates.toLowerCase()}.util.xagui"
         relocate 'eu.xap3y.xalib', "${group}.${baseCoordinates.toLowerCase()}.util.xalib"
-        relocate 'org.bstats', "${group}.${baseCoordinates.toLowerCase()}.util.bstats"
 
+        //relocate 'org.bstats', "${group}.${baseCoordinates.toLowerCase()}.util.bstats"
         /*relocate 'com.github.fierioziy.particlenativeapi', "${group}.${baseCoordinates.toLowerCase()}.util.particlenativeapi"
         relocate 'eu.xap3y.skullcreator', "${group}.${baseCoordinates.toLowerCase()}.util.skull"
         relocate 'com.cryptomorin.xseries', "${group}.${baseCoordinates.toLowerCase()}.util.xseries"
