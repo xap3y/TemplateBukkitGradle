@@ -6,4 +6,12 @@ authors: [ XAP3Y ]
 description: template
 website: https://xap3y.eu
 
-#softdepend: [PlaceholderAPI]
+#softdepend: [ PlaceholderAPI ]
+#depend: [ NBTAPI, WorldGuard ]
+#loadbefore: [OnePlugin, AnotherPlugin]
+
+#load: POSTWORLD | STARTUP
+#prefix: Example
+
+
+

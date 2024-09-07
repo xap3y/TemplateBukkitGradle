@@ -2,7 +2,6 @@ package eu.xap3y.templatebukkitgradle;
 
 import eu.xap3y.templatebukkitgradle.manager.CommandManager;
 import eu.xap3y.templatebukkitgradle.manager.ConfigManager;
-import eu.xap3y.xagui.XaGui;
 import eu.xap3y.xalib.managers.Texter;
 import eu.xap3y.xalib.objects.TexterObj;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -13,15 +12,14 @@ public final class TemplateBukkitGradle extends JavaPlugin {
 
     public static Texter texter;
 
-    public static XaGui xagui;
+    //public static XaGui xagui;
 
     @Override
     public void onEnable() {
         INSTANCE = this;
 
-
         //  Initializing XaGUI  \\
-        xagui = new XaGui(this);
+        //xagui = new XaGui(this);
 
         //  Creating parser & Parsing command classes below  \\
         CommandManager cmdManager = new CommandManager();
@@ -43,7 +41,7 @@ public final class TemplateBukkitGradle extends JavaPlugin {
         registerListeners(manager);*/
 
         //  Setting up bStats  \\
-        /*int pluginId = 1234; // <-- Replace with the id of your plugin!
+        /* int pluginId = 1234; // <-- Replace with the id of your plugin!
         Metrics metrics = new Metrics(this, pluginId);*/
 
         //  Registering PlaceholderAPI  \\
@@ -51,6 +49,11 @@ public final class TemplateBukkitGradle extends JavaPlugin {
 
         // Get current mc version as x.x.x
 
+        //  Example of adding custom filter into log4j2  \\
+        /*org.apache.logging.log4j.Logger rootLogger = LogManager.getRootLogger();
+        Logger logger = (Logger) rootLogger;
+        logger.addFilter(new ExampleFilter());*/
+        //The ExampleFilter class will extend AbstractFilter
     }
 
     /*private static void registerListeners(PluginManager manager) {

@@ -19,7 +19,9 @@ This will create the project in the active directory
 curl -fsSL https://static.xap3y.space/install.sh | bash
 ```
 
-### List of features implemented in this project:
+<br>
+<details>
+<summary> <b>List of features implemented in this project: </b></summary>
 
 - [x] [Paper API 1.20.4](https://jd.papermc.io/paper/1.20.4/)
 - [x] [XaLib](https://xalib.xap3y.eu/)
@@ -33,7 +35,20 @@ curl -fsSL https://static.xap3y.space/install.sh | bash
 - [x] [bStats](https://bstats.org/)
 - [x] [AnvilGUI](https://github.com/WesJD/AnvilGUI)
 - [x] [PlaceholderAPI](https://wiki.placeholderapi.com/developers/using-placeholderapi/)
+- [x] [SkriptAPI](https://docs.skriptlang.org/javadocs/)
+- [x] [TownyAdvanced](https://github.com/TownyAdvanced/Towny)
+- [x] [WorldGuardAPI](https://worldguard.enginehub.org/en/latest/developer/)
+- [x] [SlimeFun4API](https://slimefun.github.io/javadocs/Slimefun4/docs/)
+- [x] [Item-NBT-API](https://github.com/tr7zw/Item-NBT-API)
+- [x] [log4j-core](https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core)
+- [x] [MariaDB Java Client](https://mariadb.com/kb/en/about-mariadb-connector-j/)
+- [x] [LuckPerms API](https://luckperms.net/wiki/Developer-API#gradle)
+- [x] [GriefPrevention](https://github.com/GriefPrevention/GriefPrevention/)
+- [x] [JUnit](https://junit.org/junit5/) and [MockBukkit](https://github.com/MockBukkit/MockBukkit/tree/v1.20)
 - [ ] [ProGuard](https://www.guardsquare.com/proguard) obfuscation
+
+</details>
+<br>
 
 > [!WARNING]  
 > Not all of the features above are enabled by default! \
