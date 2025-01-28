@@ -16,7 +16,7 @@ cd TemplateBukkitGradle
 This will create the project in the active directory
 
 ```shell
-curl -fsSL https://static.xap3y.space/install.sh | bash
+curl -fsSL https://static.xap3y.tech/install.sh | bash
 ```
 
 <br>
