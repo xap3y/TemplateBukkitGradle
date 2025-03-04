@@ -2,8 +2,7 @@ package eu.xap3y.templatebukkitgradle;
 
 import eu.xap3y.templatebukkitgradle.manager.CommandManager;
 import eu.xap3y.templatebukkitgradle.manager.ConfigManager;
-import eu.xap3y.xalib.managers.Texter;
-import eu.xap3y.xalib.objects.TexterObj;
+import eu.xap3y.templatebukkitgradle.service.Texter;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class TemplateBukkitGradle extends JavaPlugin {
@@ -33,7 +32,7 @@ public final class TemplateBukkitGradle extends JavaPlugin {
         //  Setting up texter  \\
         String prefix = getConfig().getString("prefix");
         if (prefix == null) prefix = "&7[&bserver&7] &r";
-        texter = new Texter(new TexterObj(prefix, false, null));
+        texter = new Texter(prefix, false, null);
 
         //   Registering listeners  \\
 
