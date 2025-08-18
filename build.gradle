@@ -65,7 +65,7 @@ dependencies {
         OPTIONAL ( Dont forget to shadow them after enabling )
      */
 
-    //implementation 'eu.xap3y:xagui:1.2-beta.3'
+    //implementation 'eu.xap3y:xagui:1.2-beta.4'
     //implementation 'net.wesjd:anvilgui:1.10.1-SNAPSHOT'
     //implementation 'com.github.xap3y:skullcreator:ccdc446'
     //implementation 'com.github.cryptomorin:XSeries:13.0.0'
