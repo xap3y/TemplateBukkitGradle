@@ -5,12 +5,11 @@ import eu.xap3y.templatebukkitgradle.TemplateBukkitGradle;
 public class ConfigManager {
 
     public static void reloadConfig() {
-        if (!TemplateBukkitGradle.INSTANCE.getDataFolder().exists()) {
-            TemplateBukkitGradle.INSTANCE.getDataFolder().mkdir();
+        if (!TemplateBukkitGradle.getInstance().getDataFolder().exists()) {
+            TemplateBukkitGradle.getInstance().getDataFolder().mkdir();
         }
 
-        TemplateBukkitGradle.INSTANCE.saveDefaultConfig();
-        TemplateBukkitGradle.INSTANCE.reloadConfig();
+        TemplateBukkitGradle.getInstance().saveDefaultConfig();
+        TemplateBukkitGradle.getInstance().reloadConfig();
     }
-
 }

@@ -7,8 +7,9 @@
 git clone https://github.com/xap3y/TemplateBukkitGradle.git
 cd TemplateBukkitGradle
 ```
-2. Refactor the project \
-    2.1 change the `group`, `baseCoordinates` and `version` in the `build.gradle` file. \
+2. Modify gradle.properties 
+3. Refactor the project \
+    2.1 change the `group`, `baseCoordinates` and `version` in the `gradle.properties` file. \
     2.2 change the `main` and `name` in the `src/main/resources/plugin.yml` file.
 
 #### Fast installation (Linux only):
@@ -16,17 +17,15 @@ cd TemplateBukkitGradle
 This will create the project in the active directory
 
 ```shell
-curl -fsSL https://static.xap3y.fun/install.sh | bash
+curl -fsSL https://static.xap3y.space/install.sh | bash
 ```
 
 <br>
 <details>
 <summary> <b>List of features implemented in this project: </b></summary>
 
-- [x] [Paper API 1.20.4](https://jd.papermc.io/paper/1.20.4/)
-- [ ] [XaLib](https://xalib.xap3y.tech/)
+- [x] [Paper API 1.21.10](https://jd.papermc.io/paper/1.21.10/)
 - [x] [XaGUI](https://xagui.xap3y.space)
-- [x] [SkullCreator](https://skullcreator.xap3y.tech)
 - [x] [Cloud V2](https://cloud.incendo.org/minecraft/paper/)
 - [x] [Blossom](https://blossom.kyori.net)
 - [x] [Lombok](https://projectlombok.org/)
@@ -45,7 +44,6 @@ curl -fsSL https://static.xap3y.fun/install.sh | bash
 - [x] [LuckPerms API](https://luckperms.net/wiki/Developer-API#gradle)
 - [x] [GriefPrevention](https://github.com/GriefPrevention/GriefPrevention/)
 - [x] [JUnit](https://junit.org/junit5/) and [MockBukkit](https://github.com/MockBukkit/MockBukkit/tree/v1.20)
-- [ ] [ProGuard](https://www.guardsquare.com/proguard) obfuscation
 
 </details>
 <br>
