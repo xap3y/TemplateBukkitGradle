@@ -3,6 +3,8 @@ package eu.xap3y.templatebukkitgradle.service;
 import eu.xap3y.templatebukkitgradle.api.dto.TextModifierDto;
 import eu.xap3y.templatebukkitgradle.api.dto.TexterObjDto;
 import eu.xap3y.templatebukkitgradle.api.enums.DefaultFontInfo;
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.TextComponent;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
@@ -30,6 +32,11 @@ public class Texter {
         String textToSend = modifiers.colored() ? colored(text) : text;
         String prefix = modifiers.withPrefix() ? colored(data.getPrefix()) : "";
         p0.sendMessage(prefix + textToSend);
+    }
+
+    public void response(CommandSender p0, TextComponent... components) {
+        TextComponent prefix = Component.text(data.getPrefix().replaceAll("&", "§"));
+        p0.sendMessage(prefix.append(components));
     }
 
     public void response(CommandSender p0, String text) {

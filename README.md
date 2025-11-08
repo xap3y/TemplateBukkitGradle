@@ -48,6 +48,23 @@ curl -fsSL https://static.xap3y.space/install.sh | bash
 </details>
 <br>
 
+<details>
+<summary><b>Instruction for permanent installation: </b></summary>
+
+1. OPTIONALLY Install [gum](https://github.com/charmbracelet/gum?tab=readme-ov-file#installation) (For better prompts in terminal)
+2. Create `/usr/bin/newplugin`
+3. Copy content of `newplugin.sh` into newly created `/usr/bin/newplugin`
+4. Make it executable: `chmod +x /usr/bin/newplugin`
+5. Now you can create a new plugin project by running `newplugin` in terminal
+
+It will ask you for:
+- Project name
+- Destination folder
+
+After that, script will automatically rename project packages, refactor java classes and main class in plugin.yml.
+
+</details>
+
 > [!WARNING]  
 > Not all of the features above are enabled by default! \
 > To enable them, you need to uncomment the corresponding lines in the `build.gradle` file.
