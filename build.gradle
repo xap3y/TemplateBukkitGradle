@@ -6,10 +6,9 @@ plugins {
 }
 
 group = 'eu.xap3y'
-version = "${version}".replaceAll("\'", "").replaceAll("\"", "")
 
-def commandBase = "${permissionNode.replaceAll("\'", "").replaceAll("\"", "")}|alias"
-def mainCommand = "${permissionNode.replaceAll("\'", "").replaceAll("\"", "")}"
+def commandBase = "${permissionNode}|alias"
+def mainCommand = "${permissionNode}"
 
 def gitHash = {
     try {
@@ -63,28 +62,28 @@ def useVault = project.hasProperty("useVault") && project.useVault.toBoolean()
 def useLuckPerms = project.hasProperty("useLuckPerms") && project.useLuckPerms.toBoolean()
 
 dependencies {
-    compileOnly "io.papermc.paper:paper-api:${paperVersion ?: '1.21.10'}-R0.1-SNAPSHOT".replaceAll("\'", "")
-    implementation "org.incendo:cloud-annotations:${cloudAnnotationsVersion ?: '2.0.0'}".replaceAll("\'", "")
-    implementation "org.incendo:cloud-paper:${cloudPaperVersion ?: '2.0.0'}".replaceAll("\'", "")
+    compileOnly "io.papermc.paper:paper-api:${paperVersion ?: '1.21.10'}-R0.1-SNAPSHOT"
+    implementation "org.incendo:cloud-annotations:${cloudAnnotationsVersion ?: '2.0.0'}"
+    implementation "org.incendo:cloud-paper:${cloudPaperVersion ?: '2.0.0'}"
 
 
     if (usePapi) {
-        compileOnly "me.clip:placeholderapi:${papiVersion ?: '2.11.6'}".replaceAll("\'", "")
+        compileOnly "me.clip:placeholderapi:${papiVersion ?: '2.11.6'}"
     }
     if (useGui) {
-        implementation "eu.xap3y:xagui:${xaGuiVersion ?: '1.2-beta.4'}".replaceAll("\'", "")
+        implementation "eu.xap3y:xagui:${xaGuiVersion ?: '1.2-beta.4'}"
     }
     if (useStats) {
-        implementation "org.bstats:bstats-bukkit:${bStatsVersion ?: '3.0.1'}".replaceAll("\'", "")
+        implementation "org.bstats:bstats-bukkit:${bStatsVersion ?: '3.0.1'}"
     }
     if (useGson) {
-        implementation "com.google.code.gson:gson:${gsonVersion ?: '2.10.1'}".replaceAll("\'", "")
+        implementation "com.google.code.gson:gson:${gsonVersion ?: '2.10.1'}"
     }
     if (useVault) {
-        compileOnly "net.milkbowl.vault:VaultAPI:${vaultVersion ?: '1.7'}".replaceAll("\'", "")
+        compileOnly "net.milkbowl.vault:VaultAPI:${vaultVersion ?: '1.7'}"
     }
     if (useLuckPerms) {
-        compileOnly "net.luckperms:api:${luckPermsVersion ?: '5.4'}".replaceAll("\'", "")
+        compileOnly "net.luckperms:api:${luckPermsVersion ?: '5.4'}"
     }
 
     /*
@@ -113,7 +112,7 @@ dependencies {
     testImplementation 'com.github.seeseemelk:MockBukkit-v1.20:3.9.0'*/
 }
 
-def targetJavaVersion = javaVersion.replaceAll("\'", "").replaceAll("\"", "").toInteger() ?: 21
+def targetJavaVersion = javaVersion.toInteger() ?: 21
 java {
     def javaVersion = JavaVersion.toVersion(targetJavaVersion)
     sourceCompatibility = javaVersion
@@ -133,13 +132,13 @@ tasks.withType(JavaCompile).configureEach {
 
 processResources {
     def props = [
-            version: version.replaceAll("\'", "").replaceAll("\"", ""),
+            version: version,
             gitHash: gitHash(),
-            permissionNode: permissionNode.replaceAll("\'", "").replaceAll("\"", ""),
+            permissionNode: permissionNode,
             commandBase: commandBase,
             mainCommand: mainCommand,
-            baseCoordinates: baseCoordinates.replaceAll("\'", "").replaceAll("\"", ""),
-            mainClass: "${project.group}.${baseCoordinates.replaceAll("\'", "").replaceAll("\"", "").toLowerCase()}.${baseCoordinates.replaceAll("\'", "").replaceAll("\"", "")}"
+            baseCoordinates: baseCoordinates,
+            mainClass: "${project.group}.${baseCoordinates.toLowerCase()}.${baseCoordinates}"
     ]
     inputs.properties props
     filteringCharset 'UTF-8'
@@ -160,10 +159,10 @@ tasks.jar {
 tasks {
     shadowJar {
         archiveClassifier.set('')
-        archiveBaseName.set(baseCoordinates.replaceAll("\"", ""))
+        archiveBaseName.set(baseCoordinates)
 
         if (useStats) {
-            relocate 'org.bstats', "${group}.${baseCoordinates.replaceAll("\"", "").toLowerCase()}.util.bstats"
+            relocate 'org.bstats', "${group}.${baseCoordinates.toLowerCase()}.util.bstats"
         }
         /*relocate 'com.github.fierioziy.particlenativeapi', "${group}.${baseCoordinates.toLowerCase()}.util.particlenativeapi"
         relocate 'com.cryptomorin.xseries', "${group}.${baseCoordinates.toLowerCase()}.util.xseries"
