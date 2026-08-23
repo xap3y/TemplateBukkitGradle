@@ -17,7 +17,7 @@ cd TemplateBukkitGradle
 This will create the project in the active directory
 
 ```shell
-curl -fsSL https://static.xap3y.space/install.sh | bash
+curl -fsSL https://static.xap3y.eu/install.sh | bash
 ```
 
 <br>
@@ -25,7 +25,7 @@ curl -fsSL https://static.xap3y.space/install.sh | bash
 <summary> <b>List of features implemented in this project: </b></summary>
 
 - [x] [Paper API 1.21.10](https://jd.papermc.io/paper/1.21.10/)
-- [x] [XaGUI](https://xagui.xap3y.space)
+- [x] [XaGUI](https://xagui.xap3y.eu)
 - [x] [Cloud V2](https://cloud.incendo.org/minecraft/paper/)
 - [x] [Blossom](https://blossom.kyori.net)
 - [x] [Lombok](https://projectlombok.org/)
